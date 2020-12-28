@@ -1,0 +1,22 @@
+export let  todos=[
+    {
+        id:1,
+        name:"hey",
+    },
+    {
+        id:2,
+        name:"lovy",
+    },
+    {
+        id:3,
+        name:"lvy",
+    },
+    {
+        id:4,
+        name:"loy",
+    },
+    {
+        id:5,
+        name:"ljjov",
+    }
+]
