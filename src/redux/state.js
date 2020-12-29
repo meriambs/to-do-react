@@ -1,22 +1,27 @@
 export let  todos=[
     {
         id:1,
-        name:"hey",
+        name:"elm1",
+        isCompleted:false,
     },
     {
         id:2,
-        name:"lovy",
+        name:"elm2",
+        isCompleted:false,
     },
     {
         id:3,
-        name:"lvy",
+        name:"elm3",
+        isCompleted:false,
     },
     {
         id:4,
-        name:"loy",
+        name:"elm4",
+        isCompleted:false,
     },
     {
         id:5,
-        name:"ljjov",
+        name:"elm5",
+        isCompleted:false,
     }
 ]

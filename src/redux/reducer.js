@@ -1,5 +1,5 @@
 
-import {ADD_TODO,DELETE_TODO,UPDATE_TODO} from './action';
+import {ADD_TODO,DELETE_TODO,UPDATE_TODO,COMPLET_TODO} from './action';
 import {todos} from './state';
 
 export let reducer = (state = {todos}, action) => {
@@ -41,6 +41,18 @@ export let reducer = (state = {todos}, action) => {
                   
                };
             }
+            case COMPLET_TODO:
+               newTodos = [...state];
+               newTodos = newTodos.map((todo, i) =>
+        i == id ? { ...todo, isCompleted : !todo.isCompleted } : todo
+      )
+                return {
+                   ...state,
+                   todos :newTodos,
+                  
+               };
+            
+
  }  
 return state;
 }
