@@ -4,7 +4,7 @@ export const ADD_TODO = "ADD_TODO";
 export const DELETE_TODO = "DELETE_TODO";
 export const UPDATE_TODO = "UPDATE_TODO";
 export const COMPLET_TODO = "COMPLET_TODO";
-export const DONE_ORNOT = "DONE_ORNOT";
+
 
 
 export function addTodo(todo){
@@ -32,7 +32,7 @@ export function updateTodo(todo){
     }
 }
 
-// const COMPLET_TODO = "COMPLET_TODO";
+
 
  export function completTodo(todo){
      return {
@@ -41,9 +41,3 @@ export function updateTodo(todo){
      }
 }
 
-// export function doneornot(todo){
-//     return {
-//         type:DONE_ORNOT,
-//         payload:todo,
-//     }
-// }

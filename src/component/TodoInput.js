@@ -8,7 +8,7 @@ let [name,setName]= useState();
 let dispatch=useDispatch();
     return(
         <div className="row m-2">
-            <h1>TodInput</h1>
+            
             <input 
             onChange={(e)=>setName(e.target.value)} 
             value={name}

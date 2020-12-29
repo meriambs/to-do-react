@@ -42,10 +42,11 @@ export let reducer = (state = {todos}, action) => {
                };
             }
             case COMPLET_TODO:
-               newTodos = [...state];
-               newTodos = newTodos.map((todo, i) =>
-        i == id ? { ...todo, isCompleted : !todo.isCompleted } : todo
-      )
+                let id= action.payload;
+           newTodos = state.todos.map((todo) =>
+    id == todo.id ? { ...todo, isCompleted : !todo.isCompleted } : todo
+      );
+      console.log('id',id);
                 return {
                    ...state,
                    todos :newTodos,

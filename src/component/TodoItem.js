@@ -15,15 +15,22 @@ function TodoItem({todo}){
             className="row mx-2 align-items-center">
                 {/* <div>{todo.id.length > 1 ?todo.id[2] : todo.id}</div> */}
                 <div>
-                   <AiOutlineCheck  onClick={()=>dispatch(completTodo(todo.id))}>  {' '}
-                {!todo.complete ? 'Complete' : 'Undo'}</AiOutlineCheck>
+                   <AiOutlineCheck onClick={()=>{
+                     console.log('hey',todo.id);
+                     dispatch(completTodo(todo.id))}}>  
+                   {' '}
+                {!todo.isCompleted ? 'Complete' : 'Undo'}</AiOutlineCheck>
                 </div>
                 <div 
                 className="col" >
  {editable ? <input type="text" className="form-control"
  value={name} 
  onChange={(e)=>{console.log(e.target.value);
- setName(e.target.value)}} /> : <h4>{todo.name}</h4>}
+ setName(e.target.value)}} /> : <h4  style={{
+                  display: 'inline',
+                  textDecoration: todo.isCompleted ? 'line-through' : 'none'
+                }}
+                >{todo.name}</h4>}
  </div>
                     
                  <button 
@@ -47,14 +54,7 @@ function TodoItem({todo}){
          
      }}
      >{editable ? "Update" : "Edit"}</button>
-     <p
-                style={{
-                  display: 'inline',
-                  textDecoration: todo.complete ? 'line-through' : 'none'
-                }}
-              >
-                {todo.name}
-              </p>
+    
             </div>
        
        
